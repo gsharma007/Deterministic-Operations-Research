@@ -1,0 +1,23 @@
+set area := 1 2 3 4; #index for area
+set vtype := 1 2 3; #index for vehicle
+
+#minimum number of vehicles need to be assigned to area i
+param D :=
+1 10
+2 11
+3 20
+4 15;
+
+#total available vehicles of type j
+param S :=
+1 51
+2 23
+3 13;
+
+#profit from assigning vehicle typejto areai
+param profit:  1   2   3:=
+           1  5   7  13
+           2  9  11  17  
+           3 15  16  17
+           4  1   8   0;
+           
