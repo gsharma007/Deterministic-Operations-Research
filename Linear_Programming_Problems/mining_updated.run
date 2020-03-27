@@ -1,0 +1,27 @@
+reset;
+
+model 'mining.mod';
+
+data 'mining.dat';
+
+option solver cplex;
+
+option cplex_options 'sensitivity';
+
+expand;
+
+solve;
+
+display X, Y, X.rc, Y.rc;
+
+display X.slack, Y.slack;
+
+display Supply, Demand, Invesment_Limitation;
+
+display X.current, Y.current;
+
+display Supply.dual, Demand.dual, Invesment_Limitation.dual;
+
+display Supply.slack, Demand.slack, Invesment_Limitation.slack;
+
+display Supply.status, Demand.status, Invesment_Limitation.status;

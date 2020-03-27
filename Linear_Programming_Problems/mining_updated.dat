@@ -1,0 +1,43 @@
+data;
+
+param: SITE:  s :=  	# defines set "SITE" and param "s"
+        S1   40
+        S2   20
+        S3   16 ;
+
+#{13, 13, 13, 5, 7}
+
+param: MARKET:  d :=  	# defines "MARKET" and "d"
+        M1      13
+        M2    	13
+        M3      13
+        M4      5
+        M5    	7;        
+        
+param V:= 5;    		#invesment limitation        
+        
+
+param c:				#cost of shipping by rail
+         M1  	M2  	M3  	M4  	M5 :=
+   S1    7.31   16.42   18.38   2.87   16.05
+   S2    8.43   9.82    10.25   1000   3.61
+   S3    4.43   1000    0.76    7.58   7.42;
+   
+   
+param p:  				#cost of shipping by ship
+
+   		 M1  	M2  	M3  	M4  	M5 :=
+   S1    4.035  7.58    2.345   2.8   	3.085
+   S2    6.57   3.18    9.345   4.065   5.375
+   S3    6.075  9.065   4.55    8.43    0.235;
+   
+   
+param v:  				#invesment required for shipping by ship
+
+   		 M1  	M2  	M3  	M4  	M5 :=
+   S1    1  	4.7		3.5   	0.7   	2.8
+   S2    4   	0.2     3.9   	3.7		0.2
+   S3    1.5  	2   	2.7    	1.6    	4;
+   
+ 
+ 
