@@ -1,0 +1,26 @@
+reset;
+
+option solver gurobi;
+
+model 'sugar.mod';
+
+data 'sugar.dat';
+
+expand;
+
+solve;
+
+display Order, Order.rc;
+
+display {i in SUGARS}: sum {j in SUPPLIERS} content[i, j] * Order[j];
+
+display TotalContentL.dual, TotalContentU.dual, TotalWeight.dual;
+
+display TotalContentL, TotalContentU, TotalWeight;
+
+display TotalContentL.slack, TotalContentU.slack, TotalWeight.slack;
+
+display TotalContentL.status, TotalContentU.status, TotalWeight.status;
+
+
+
